@@ -1,0 +1,61 @@
+.spaceTop{
+    margin-top: 5em;
+}
+
+.spaceLeft{
+    margin-left: 5em;
+}
+
+.rounded{
+    border-radius: 25px
+}
+
+.spaceRows{
+    margin-top: 1em;
+}
+
+.spacewidth{
+    width: 80%;
+}
+
+.spaceNum{
+    margin-top: 3em;
+}
+
+.spaceTitleRows{
+    margin-top: 5em;
+}
+
+.spaceCols{
+    margin-right: 3em;
+}
+
+.spaceSelect{
+    margin-bottom: 5em;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(68, 128, 0);
+    cursor: pointer;
+}
+
+.spaceTitle3{
+    margin-top: 6em;
+}
+
+.spaceFooter{
+    margin-top: 3em;
+}
+
+pre{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+
+
+

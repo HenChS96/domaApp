@@ -1,20 +1,274 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<h2 class="row text-muted justify-content-md-center">CREATE YOUR OWN BRAND AND WEBSITE</h2>
 
+
+<div class="container spaceTop">
+  <div class="row">
+    <div class="col">
+      <h5>1. Search for the availability of your new brand</h5>
+    </div>
+  </div>
+
+  <div class="row spaceRows">
+    <div class="col">
+      <input [(ngModel)]="domainName" id="search-input" type="text" size="30" placeholder="Find your perfect domain name" style="width: 60%" pInputText>
+      <button id="search-btn" type="button" pButton class="ui-button-raised" label="Search" (click)="isAvailable()"></button>
+    </div>
+  </div>
+
+  <p-toast position="top-center" key="tc"></p-toast>
+
+  <div class="row spaceRows" *ngIf="available">
+    <div class="col">
+      Your website is available. We will buy it for you!
+    </div>
+  </div>
+
+  <div class="row spaceRows" *ngIf="!available">
+    <div class="col">
+      WEBSITE NOT AVAILABLE please do a new search with a new name.
+    </div>
+  </div>
+
+
+  <div class="row spaceRows spaceNum" *ngIf="available">
+    <div class="row">
+      <div class="col">
+        <h5>2. Choose from the pre-determined designs:</h5>
+      </div>
+      <div>
+
+        <div class="row spacewidth">
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Extended Reality" label="Extended Reality" [(ngModel)]="val1" inputId="opt1"></p-radioButton>
+              <img src="assets/img/samp01.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Underground Vault" label="Underground Vault" [(ngModel)]="val1" inputId="opt2"></p-radioButton>
+              <img src="assets/img/samp02.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Cinema Line" label="Cinema Line" [(ngModel)]="val1" inputId="opt3"></p-radioButton>
+              <img src="assets/img/samp03.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Gravity" label="Gravity" [(ngModel)]="val1" inputId="opt4"></p-radioButton>
+              <img src="assets/img/samp04.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row spacewidth">
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Splendid Avenue" label="Splendid Avenue" [(ngModel)]="val1" inputId="opt1"></p-radioButton>
+              <img src="assets/img/samp05.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Suspended Pixels" label="Suspended Pixels" [(ngModel)]="val1" inputId="opt2"></p-radioButton>
+              <img src="assets/img/samp06.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Poster Wall" label="Poster Wall" [(ngModel)]="val1" inputId="opt3"></p-radioButton>
+              <img src="assets/img/samp07.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Elegant Suit" label="Elegant Suit" [(ngModel)]="val1" inputId="opt4"></p-radioButton>
+              <img src="assets/img/samp08.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row spacewidth">
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Subway Stop" label="Subway Stop" [(ngModel)]="val1" inputId="opt1"></p-radioButton>
+              <img src="assets/img/samp09.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Ribbon rampage" label="Ribbon rampage" [(ngModel)]="val1" inputId="opt2"></p-radioButton>
+              <img src="assets/img/samp010.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Tough and Still" label="Tough and Still" [(ngModel)]="val1" inputId="opt3"></p-radioButton>
+              <img src="assets/img/samp011.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Great Cinema" label="Great Cinema" [(ngModel)]="val1" inputId="opt4"></p-radioButton>
+              <img src="assets/img/samp012.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row spacewidth">
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Easy Login" label="Easy Login" [(ngModel)]="val1" inputId="opt1"></p-radioButton>
+              <img src="assets/img/samp013.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="Lucky Numbers" label="Lucky Numbers" [(ngModel)]="val1" inputId="opt2"></p-radioButton>
+              <img src="assets/img/samp014.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="ui-g-12">
+              <p-radioButton name="group1" value="King's Hall" label="King's Hall" [(ngModel)]="val1" inputId="opt3"></p-radioButton>
+              <img src="assets/img/samp015.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col">
+
+        <button pButton type="button" label="Continue" class="ui-button-rounded ui-button-success" (click)="nextStep3()"></button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row spaceRows spaceNum " *ngIf="step3">
+
+    <div class="row">
+      <div class="col">
+        <h5>3. Give Us the theme of your website:</h5>
+      </div>
+    </div>
+
+    <div class="row spaceTitleRows">
+
+      <div class="col spaceCols" style="width: 50%">
+        <div class="row">
+          Colors:
+        </div>
+        <p-multiSelect [options]="cities2" optionLabel="colors" [filter]="true"></p-multiSelect>
+      </div>
+
+      <div class="col spaceCols">
+        <div class="row">
+          Sports:
+        </div>
+        <p-multiSelect [options]="cities2" optionLabel="sports" [filter]="true"></p-multiSelect>
+      </div>
+
+      <div class="col spaceCols">
+        <div class="row">
+          Teams:
+        </div>
+        <p-multiSelect [options]="cities2" optionLabel="teams" [filter]="true"></p-multiSelect>
+      </div>
+
+    </div>
+
+    <!-- <div class="row spaceRows">
+          <a href="#" class="badge badge-primary">Accept Terms and conditions</a>
+          <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+      </div>-->
+
+    <div class="row spaceRows spaceTitle3">
+      <div class="col">
+        <a (click)="showDialog()">Accept Terms and conditions:</a>
+        <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+      </div>
+    </div>
+
+    <div class="row spaceRows spaceTitle3">
+      <div class="col">
+        <label>Please insert an email to receive info on your request:</label>
+        <input type="email" [(ngModel)]="email" size="30" style="width: 40%; margin-left: 1%" pInputText>
+      </div>
+    </div>
+
+
+    <div class="row spaceRows spaceTitle3">
+
+      <button pButton type="button" label="SUBMIT YOUR REQUEST" class="ui-button-rounded ui-button-success" (click)="submit()"></button>
+
+    </div>
+
+
+
+    <p-dialog header="TERMS AND CONDITIONS" [(visible)]="display">
+      <pre>
+
+        Once you have submitted your request we will proceed to buy the website.
+        If you decide to cancel your request and we have already bought the website, the cost
+        will be charged to your PPH account.
+
+        The estimated time of delivery for your website will be of 46 business days. Once the 
+        website is ready we will inform the agent and will proceed to put a message in the
+        player accounts to inform them that they must start using the new website.
+
+        -There will be a $40 monthly cost charge to your PPH account for webhosting and 
+        webdesign charges.
+            </pre>
+
+      <p-footer>
+        <div class="text-center">
+          <button type="button" pButton icon="pi pi-check" (click)="checked=true; display=false;" label="ACCEPT TERMS AND CONDITIONS"></button>
+        </div>
+      </p-footer>
+
+    </p-dialog>
+
+  </div>
+
+
+
+  <div class="row spaceNum">
+  </div>
+
+
+  <footer>
+    <div class="row spaceFooter">
+      <div class="col">
+        <label>***There is a $40 monthly free per website that we'll be charged to your PPH bill</label>
+      </div>
+    </div>
+  </footer>
+
+</div>
