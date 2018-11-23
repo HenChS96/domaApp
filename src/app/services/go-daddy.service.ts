@@ -19,7 +19,7 @@ export class GoDaddyService {
       'Authorization': 'sso-key 3mM44UYhwVbtpN_HfYs3STNfsBmhPrbunvTyW:HfYvwzcYY2aZYM22wnL4Fn'
     });
 
-    return this.http.post(url, {headers});
+    return this.http.get('https://api.ote-godaddy.com/v1/domains/available?domain=ss.com', {headers});
 
 }
 

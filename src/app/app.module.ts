@@ -6,15 +6,16 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import {ButtonModule} from 'primeng/button';
-import {InputTextModule} from 'primeng/inputtext';
-import {CheckboxModule} from 'primeng/checkbox';
-import {RadioButtonModule} from 'primeng/radiobutton';
-import {MultiSelectModule} from 'primeng/multiselect';
-import {InputSwitchModule} from 'primeng/inputswitch';
-import {DialogModule} from 'primeng/dialog';
-import {ToastModule} from 'primeng/toast';
-
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { CheckboxModule } from 'primeng/checkbox';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { DialogModule } from 'primeng/dialog';
+import { ToastModule } from 'primeng/toast';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import {LightboxModule} from 'primeng/lightbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -24,18 +25,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
-    ButtonModule,
-    InputTextModule,
-    CheckboxModule,
-    RadioButtonModule,
-    FormsModule,
-    MultiSelectModule,
-    InputSwitchModule,
-    BrowserAnimationsModule,
-    DialogModule,
-    ToastModule
+    BrowserModule, HttpClientModule, ButtonModule,
+    InputTextModule, CheckboxModule, RadioButtonModule,
+    FormsModule, MultiSelectModule, InputSwitchModule,
+    BrowserAnimationsModule, DialogModule, ToastModule,
+    InputTextareaModule, LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

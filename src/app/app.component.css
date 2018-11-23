@@ -56,6 +56,20 @@ pre{
     font-size: 1em;
 }
 
+.img:hover{
+    color: chocolate;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 1;
+  transform: scale(1.90);
+  -ms-transform: scale(1.90); /* IE 9 */
+  -webkit-transform: scale(1.90); /* Safari and Chrome */
+  z-index: 10;
+}
+
 
 
 
