@@ -13,13 +13,15 @@ export class GoDaddyService {
 
   getQuery( query: string ){
 
-    const url = `https://api.godaddy.com/v1/domains/${ query }`;
+    const url = `https://api.godaddy.com/v1/domains/${ query }`;  
     
     const headers = new HttpHeaders({
-      'Authorization': 'sso-key 3mM44UYhwVbtpN_HfYs3STNfsBmhPrbunvTyW:HfYvwzcYY2aZYM22wnL4Fn'
+      'Authorization': 'sso-key 3mM44UYhwVbtpN_HfYs3STNfsBmhPrbunvTyW:HfYvwzcYY2aZYM22wnL4Fn',
+      'Access-Control-Allow-Origin': 'https://test.crownsports.mx/',
+      'Cache-control': 'no-cache'
     });
 
-    return this.http.get('https://api.ote-godaddy.com/v1/domains/available?domain=ss.com', {headers});
+    return this.http.get(url, {headers});
 
 }
 

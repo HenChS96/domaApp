@@ -22,6 +22,7 @@ export class AppComponent {
   design = 'Extended Reality';
 
   available: boolean;
+  showDesigns = true;
 
   step3 = false;
 

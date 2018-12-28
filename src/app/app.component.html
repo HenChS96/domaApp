@@ -1,4 +1,4 @@
-<h2 class="row text-muted justify-content-md-center">CREATE YOUR OWN BRAND AND WEBSITE</h2>
+<h2 class="row text-muted justify-content-md-center">CREATE YOUR OWN BRAND AND WEBSITE!!!</h2>
 
 
 <div class="container spaceTop">
@@ -12,7 +12,7 @@
     <div class="col">
       <input [(ngModel)]="domainName" id="search-input" type="text" size="30" placeholder="Find your perfect domain name" style="width: 60%"
         pInputText>
-      <button id="search-btn" type="button" pButton class="ui-button-raised" label="Search" (click)="isAvailable()"></button>
+      <button id="search-btn" type="button" pButton class="ui-button-raised" label="Search" (click)="checkDomain()"></button>
     </div>
   </div>
 
@@ -31,7 +31,7 @@
   </div>
 
 
-  <div class="row spaceRows spaceNum" *ngIf="available">
+  <div class="row spaceRows spaceNum" *ngIf="available && showDesigns">
     <div class="row">
       <div class="col">
         <h5>2. Choose from the pre-determined designs:</h5>
@@ -40,31 +40,31 @@
 
         <div class="row spacewidth">
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Extended Reality" label="Extended Reality" [(ngModel)]="design" inputId="opt1"></p-radioButton>
-              <img src="assets/img/samp01.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp01.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Underground Vault" label="Underground Vault" [(ngModel)]="design" inputId="opt2"></p-radioButton>
-              <img src="assets/img/samp02.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp02.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Cinema Line" label="Cinema Line" [(ngModel)]="design" inputId="opt3"></p-radioButton>
-              <img src="assets/img/samp03.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp03.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Gravity" label="Gravity" [(ngModel)]="design" inputId="opt4"></p-radioButton>
-              <img src="assets/img/samp04.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp04.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
@@ -72,31 +72,31 @@
 
         <div class="row spacewidth">
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Splendid Avenue" label="Splendid Avenue" [(ngModel)]="design" inputId="opt1"></p-radioButton>
-              <img src="assets/img/samp05.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp05.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Suspended Pixels" label="Suspended Pixels" [(ngModel)]="design" inputId="opt2"></p-radioButton>
-              <img src="assets/img/samp06.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp06.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Poster Wall" label="Poster Wall" [(ngModel)]="design" inputId="opt3"></p-radioButton>
-              <img src="assets/img/samp07.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp07.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Elegant Suit" label="Elegant Suit" [(ngModel)]="design" inputId="opt4"></p-radioButton>
-              <img src="assets/img/samp08.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp08.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
@@ -104,31 +104,31 @@
 
         <div class="row spacewidth">
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Subway Stop" label="Subway Stop" [(ngModel)]="design" inputId="opt1"></p-radioButton>
-              <img src="assets/img/samp09.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp09.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Ribbon rampage" label="Ribbon rampage" [(ngModel)]="design" inputId="opt2"></p-radioButton>
-              <img src="assets/img/samp010.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp010.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Tough and Still" label="Tough and Still" [(ngModel)]="design" inputId="opt3"></p-radioButton>
-              <img src="assets/img/samp011.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp011.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Great Cinema" label="Great Cinema" [(ngModel)]="design" inputId="opt4"></p-radioButton>
-              <img src="assets/img/samp012.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp012.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
@@ -136,24 +136,24 @@
 
         <div class="row spacewidth">
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Easy Login" label="Easy Login" [(ngModel)]="design" inputId="opt1"></p-radioButton>
-              <img src="assets/img/samp013.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp013.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="Lucky Numbers" label="Lucky Numbers" [(ngModel)]="design" inputId="opt2"></p-radioButton>
-              <img src="assets/img/samp014.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp014.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
-          <div class="col-3 img">
+          <div class="col-3">
             <div class="ui-g-12">
               <p-radioButton name="group1" value="King's Hall" label="King's Hall" [(ngModel)]="design" inputId="opt3"></p-radioButton>
-              <img src="assets/img/samp015.jpg" class="rounded" alt="SpotiApp" style="width: 14em">
+              <img src="assets/img/samp015.jpg" class="rounded img" alt="SpotiApp" style="width: 14em">
             </div>
           </div>
 
@@ -165,14 +165,36 @@
     <div class="row">
       <div class="col">
 
-        <button pButton type="button" label="Continue" class="ui-button-rounded ui-button-success" (click)="nextStep3()"></button>
+        <button pButton type="button" label="Continue" class="ui-button-rounded ui-button-success" (click)="showDesigns=false; nextStep3();"></button>
 
       </div>
     </div>
 
   </div>
 
+  <div *ngIf="!showDesigns" class="spaceRows spaceNum">
 
+      <div class="col">
+        <h5>2. Choose from the pre-determined designs:</h5>
+      </div>
+
+      <div class="row spaceRows">
+          <div class="col">
+
+            <h4 id="ColorChoose">{{design}}</h4>
+      </div>
+      </div>
+
+      <div class="row spaceRows">
+          <div class="col">
+
+           <button id="search-btn" type="button" pButton class="ui-button-raised" label="Choose Another Design" (click)="showDesigns=true;"></button>
+
+      </div>
+      </div>
+
+
+  </div>
 
 
   <div class="row spaceRows spaceNum " *ngIf="step3">
